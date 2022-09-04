@@ -1,0 +1,257 @@
+@font-face {
+    font-family:lesporche;
+    src: url(/arquivos/LEPORSCHE.otf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bg-page:#ffffff;
+    --bg-header:#bcc5b6;
+
+    --ff-titles:lesporche,sans-serif;
+
+    --fs-nav-header:clamp(1.6rem, 0.1rem + 4vw, 2.6rem);
+    --bg-size-header:clamp(32rem, 15rem + 50vw, 40rem );
+    --size-img-header: clamp(19rem, 10rem + 25vw, 23rem);
+    --carrosel-size-width: clamp(30rem, 10rem + 55vw, 55rem);
+    --carrosel-size-height: clamp(50rem, 10rem + 50vw, 60rem);
+
+    --fc-nav:#ffffff;
+    --fc-hover:#a22c27;
+    font-size: 62.5%;
+}
+.page{
+    max-width: 65em;
+    margin: 0 auto;
+    background-color: var(--bg-page);
+}
+header{
+    background-color: var(--bg-header);
+    
+    max-width: 63rem;
+    height: var(--bg-size-header);
+
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+
+    align-items: center;
+ 
+}
+header img{
+    width: clamp(18rem, 10rem + 25vw , 45rem);
+    height: fit-content;
+    
+    margin: 2rem auto;
+}
+header nav{
+    width:clamp(35rem, 10rem + 25vw , 63rem);
+
+    display: flex;
+    justify-content: center;
+    gap:2rem;
+
+    font-size: var(--fs-nav-header);
+    letter-spacing: 1px;
+    line-height: 3.2rem;
+    
+    padding: 0 2.5rem 1.5rem;
+}
+header nav a{
+    color: var(--fc-nav);
+
+    text-decoration: none;
+    cursor: pointer;
+
+    font-family: var(--ff-titles);
+}
+header nav a:hover{
+    color:var(--fc-hover);
+    opacity:0.7;
+}
+header .raysa-img{
+    width: var(--size-img-header);
+    height: var(--size-img-header);
+
+    object-fit: cover;
+
+    border-radius: 50%;
+    margin-top:7.5rem ;  
+
+    position: relative;
+    top:-90px;
+
+    border:3px solid white;
+}
+/* Conteúdo principal*/
+
+.main-text{
+    max-width: 63.0rem;
+    text-align: center;
+    
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+
+    margin-top: 15rem;
+}
+.profile-vetor, .projects-vetor{
+    width: 15rem;
+
+    margin: -10rem auto -6rem;
+}
+section h1{
+    color: #b46444;
+
+    font-family:var(--ff-titles);
+    font-size: 3.8rem;
+    line-height: 3.8rem;
+    margin-bottom: 1.2rem;
+}
+.sub-titulo{
+
+    color: #0c0908;
+
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.4rem;
+}
+.descricao-raysa {
+    max-width:65rem ;
+    
+    font-size: 1.6rem;
+    color: #9e9d9d;
+
+    padding: 4rem 6rem;
+}
+.decoration{
+    display: flex;
+    flex: row;
+    gap: 0.6rem;
+
+    justify-content: center;
+
+    margin: 3rem auto 8rem ;
+}
+.ball{
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background-color: #9e9d9d;
+
+    opacity: 0.6;
+}
+
+/* Main Projects*/
+
+.line{
+    width: 20rem;
+    height: 0.6rem;
+    background-color: #9e9d9d;
+    border-radius: 9rem;
+
+    opacity: 0.6;
+    margin-left: 5px;
+}
+.projects-vetor{
+    display: grid;
+    justify-self: center;
+}
+.projects{
+    max-width: 63rem;
+
+    
+    margin: 0 auto 20rem;
+}
+.projects-list{
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+
+    list-style: none;
+    padding: 1.4rem;
+}
+.projects-list button{
+    font-family: var(--ff-titles);
+    font-size: var(--fs-nav-header);
+    color: var(--fc-hover);
+
+    background-color: white;
+    border: none;
+}
+.projects-list button:hover{
+    cursor: pointer;
+    transform: scaleX(1.2) scaleY(1.2);
+    opacity: 0.6;
+}
+
+.project-wrapper{
+    max-width:63rem ;
+    margin: 2rem auto 0;
+    padding: 5rem 5rem ;
+
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+
+    background-color: var(--bg-header);
+}
+
+.textos-projeto h1{
+    font-size: clamp( 2.8rem, 2vw + 5vw ,3.8rem);
+    font-family: var(--ff-titles);
+    color: var(--fc-hover);
+    align-self: flex-start;
+}
+.textos-projeto h3{
+    font-family: sans-serif;
+    font-size:clamp( 1.6rem, 1vw + 2vw ,2rem);
+    font-weight: 400;
+
+    align-self:flex-start;
+}
+.textos-projeto p{
+    align-self: flex-start;
+    
+    max-width:65rem ;
+    
+    font-size: 1.6rem;
+    color: white;
+    
+    margin: 3rem 0 5rem;
+}
+section .project-wrapper .imagens-projeto img{
+    
+    width: clamp(32.5rem, 60vw + 8rem, 50rem);
+    height: auto;
+    object-fit: cover;
+
+    border-radius: 10%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.514);
+}
+
+section .imagens-projeto .hide{
+    display: none;
+}
+section .project-wrapper button{
+    margin-top: 2rem;
+    padding-top: 1rem;
+    width: 3rem;
+    height: 3rem;
+    
+    font-size: 2rem;
+    background-color: white;
+    color: #b46444;
+
+
+    border: none;
+    border-radius: 50%;
+}
+section .project-wrapper button:hover{
+    opacity: 0.6;
+    cursor: pointer;
+}
